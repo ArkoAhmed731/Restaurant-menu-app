@@ -9,9 +9,14 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <h1> Restaurant Menu</h1>
-        <h3>{{meals}}</h3>
-        <h3>{{ingredients}}</h3>
+        <h1> Arzo Restaurant Menu</h1>
+        {% for meal in meals%}
+            <h2>{{meal.1}}</h2>
+            {%for m in item_list%}
+                    <h3>{{m.meal}}</h3>
+                        <p>{{m.descriptions}}</p>
+                {% endfor %}
+        {%endfor%}
         <script src="" async defer></script>
     </body>
 </html>
